@@ -103,3 +103,11 @@
 [data-aos-delay="400"] { transition-delay: 400ms; }
 [data-aos-delay="500"] { transition-delay: 500ms; }
 [data-aos-delay="600"] { transition-delay: 600ms; }
+
+/* Language Switch Transition */
+.lang-fade-layer [data-i18n] {
+  transition: opacity 0.2s ease-in-out !important;
+}
+.lang-switching [data-i18n] {
+  opacity: 0 !important;
+}

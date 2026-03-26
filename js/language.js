@@ -203,6 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  let isFirstLoad = true;
+
   function updateLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('appLang', lang);
@@ -216,11 +218,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-    elementsToTranslate.forEach(element => {
-      const key = element.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        element.textContent = translations[lang][key];
-      }
-    });
+
+    if (isFirstLoad) {
+      elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      isFirstLoad = false;
+      return;
+    }
+
+    document.body.classList.add('lang-fade-layer', 'lang-switching');
+
+    setTimeout(() => {
+      elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      document.body.classList.remove('lang-switching');
+      
+      setTimeout(() => {
+        document.body.classList.remove('lang-fade-layer');
+      }, 200);
+    }, 200);
   }
 });
