@@ -1,0 +1,105 @@
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes bobbing {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
+@keyframes arrow-bounce {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-10px, 10px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+  100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+/* Toast slide-in from bottom-right */
+@keyframes toastSlideIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes toastSlideOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 0; transform: translateY(20px) scale(0.95); }
+}
+
+/* ── Toast Notification ────────────────────── */
+.form-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 9999;
+  max-width: 380px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.form-toast--success {
+  background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.form-toast--error {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.form-toast--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.toast-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* AOS Substitutes (Fade & Stagger effects) */
+[data-aos] {
+  opacity: 0;
+  transition-duration: 0.85s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(40px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-40px);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Delays */
+[data-aos-delay="0"]   { transition-delay: 0ms; }
+[data-aos-delay="100"] { transition-delay: 100ms; }
+[data-aos-delay="200"] { transition-delay: 200ms; }
+[data-aos-delay="300"] { transition-delay: 300ms; }
+[data-aos-delay="400"] { transition-delay: 400ms; }
+[data-aos-delay="500"] { transition-delay: 500ms; }
+[data-aos-delay="600"] { transition-delay: 600ms; }

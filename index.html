@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researchers Academy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
+                    <span class="logo-text">RESEARCHERS ACADEMY</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link" data-i18n="nav_home">Главная</a></li>
+                        <li><a href="#courses" class="nav-link" data-i18n="nav_courses">Курсы</a></li>
+                        <li><a href="#about" class="nav-link" data-i18n="nav_about">О нас</a></li>
+                        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="language-switcher">
+                        <button class="btn-lang active" data-lang="ru">🇷🇺 RU</button>
+                        <button class="btn-lang" data-lang="uz">🇺🇿 UZ</button>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" data-i18n="btn_consultation">Консультация</a>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <div class="badge" data-aos="fade-up">
+                            <i data-lucide="shield-check"></i>
+                            <span data-i18n="hero_badge">100% Satisfaction Guarantee</span>
+                        </div>
+                        <h1 class="hero-title" data-i18n="hero_title" data-aos="fade-up" data-aos-delay="100">
+                            Ваш надежный партнер на пути к международной публикации
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero_subtitle" data-aos="fade-up" data-aos-delay="200">
+                            Академическая экосистема, где исследователи пишут научные статьи для Scopus и Web of Science под руководством экспертов
+                        </p>
+                        
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                            <a href="#courses" class="btn btn-primary btn-lg" data-i18n="btn_explore">Все курсы</a>
+                            <a href="tel:+998901234567" class="phone-link">
+                                <div class="phone-icon"><i data-lucide="phone-call"></i></div>
+                                <div>
+                                    <span class="phone-label" data-i18n="phone_label">Есть вопросы?</span>
+                                    <span class="phone-number">+998 90 123 45 67</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="400">
+                        <div class="hero-image-container glass-panel">
+                            <!-- Placeholder image styling -->
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Student" class="placeholder-img student-img">
+                            
+                            <!-- Floating Elements -->
+                            <div class="floating-bubble bubble-1">
+                                <div class="bubble-icon bg-green"><i data-lucide="users"></i></div>
+                                <div class="bubble-info text-center">
+                                    <span class="bubble-title" data-i18n="bubble_students">Всего студентов</span>
+                                    <span class="bubble-value">15k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="about-image-wrapper" data-aos="fade-right">
+                        <div class="about-image-container">
+                            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80" alt="Instructor" class="about-img">
+                            <div class="floating-badge badge-blue">
+                                <span class="badge-number">12 +</span>
+                                <span class="badge-text" data-i18n="about_experience">Years of Experiences</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content" data-aos="fade-left">
+                        <div class="badge badge-light" data-i18n="about_tag">Get To Know About Us</div>
+                        <h2 class="about-title">
+                            <span data-i18n="about_title_1">Discover Top</span> 
+                            <span class="highlight-text">
+                                <span data-i18n="about_title_highlight">Instructors</span>
+                                <svg class="underline-svg" viewBox="0 0 200 15" preserveAspectRatio="none">
+                                    <path d="M0,10 Q100,-5 200,10" fill="none" stroke="var(--color-accent)" stroke-width="4"></path>
+                                </svg>
+                            </span> 
+                            <br><span data-i18n="about_title_2">Around The World</span>
+                        </h2>
+                        <p class="about-desc" data-i18n="about_desc">Академическая экосистема, предоставляющая вам доступ к лучшим менторам и экспертам по всему миру для успешной публикации ваших исследований в международных базах данных.</p>
+                        
+                        <div class="about-stats-grid">
+                            <div class="about-stat">
+                                <div class="stat-icon icon-blue"><i data-lucide="headset"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-val">20000</span>
+                                    <span class="stat-name" data-i18n="about_stat_1">Expert Tutors</span>
+                                </div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="stat-icon icon-green"><i data-lucide="file-text"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-val">1500</span>
+                                    <span class="stat-name" data-i18n="about_stat_2">Top Lessons</span>
+                                </div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="stat-icon icon-purple"><i data-lucide="graduation-cap"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-val">18000</span>
+                                    <span class="stat-name" data-i18n="about_stat_3">Over Students</span>
+                                </div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="stat-icon icon-red"><i data-lucide="play-circle"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-val">3200</span>
+                                    <span class="stat-name" data-i18n="about_stat_4">Pro Videos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#courses" class="btn btn-primary btn-discover">
+                            <span data-i18n="btn_discover">DISCOVER MORE</span> <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="stat-number"><span class="counter" data-target="10000">0</span>+</div>
+                        <div class="stat-label" data-i18n="stat_scholars">Целевых ученых</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number">TOP&#8209;<span class="counter" data-target="100">0</span></div>
+                        <div class="stat-label" data-i18n="stat_founder">Основатель в мировом рейтинге</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number"><span class="counter" data-target="95">0</span>%</div>
+                        <div class="stat-label" data-i18n="stat_success">Успешных публикаций</div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number"><span class="counter" data-target="6">0</span> мес</div>
+                        <div class="stat-label" data-i18n="stat_time">Среднее время до публикации</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problems Section -->
+        <section id="problems" class="problems">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title" data-i18n="problems_title">Знакомые проблемы?</h2>
+                    <p class="section-subtitle" data-i18n="problems_subtitle">Вы не одиноки. Тысячи исследователей сталкиваются с этими вызовами</p>
+                </div>
+                <div class="problems-grid">
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="problem-icon">⚠️</div>
+                        <h3 class="problem-title" data-i18n="prob_1_title">Хищнические журналы</h3>
+                        <p class="problem-desc" data-i18n="prob_1_desc">Риск публикации в недобросовестных изданиях без индексации.</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="problem-icon">📉</div>
+                        <h3 class="problem-title" data-i18n="prob_2_title">Устаревшие стандарты</h3>
+                        <p class="problem-desc" data-i18n="prob_2_desc">Несоответствие современным требованиям международных баз.</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="problem-icon">🌍</div>
+                        <h3 class="problem-title" data-i18n="prob_3_title">Языковой барьер</h3>
+                        <p class="problem-desc" data-i18n="prob_3_desc">Сложности с академическим английским и правильной терминологией.</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="problem-icon">❌</div>
+                        <h3 class="problem-title" data-i18n="prob_4_title">Отказы без объяснений</h3>
+                        <p class="problem-desc" data-i18n="prob_4_desc">Регулярные реджекты (отказы) от редакторов без детального фидбека.</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="problem-icon">🔍</div>
+                        <h3 class="problem-title" data-i18n="prob_5_title">Отсутствие системы</h3>
+                        <p class="problem-desc" data-i18n="prob_5_desc">Непонимание пошагового алгоритма написания научной статьи.</p>
+                    </div>
+                    <div class="problem-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="problem-icon">⏰</div>
+                        <h3 class="problem-title" data-i18n="prob_6_title">Давление и сроки</h3>
+                        <p class="problem-desc" data-i18n="prob_6_desc">Стресс из-за дедлайнов по защите диссертаций и отчетности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="solution">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <div class="badge mx-auto"><span data-i18n="solution_badge">НАШЕ РЕШЕНИЕ</span></div>
+                    <h2 class="section-title" data-i18n="solution_title">Полный путь от обучения до публикации</h2>
+                </div>
+                <div class="solution-grid">
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-blue"></div>
+                            <div class="solution-avatar">🎓</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_1_title">Сильное лидерство</h4>
+                        <p class="solution-role" data-i18n="sol_1_desc">Основатель — Рауф Салахаджаев, топ-100 экономистов мира</p>
+
+                    </div>
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-green"></div>
+                            <div class="solution-avatar">🌟</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_2_title">Международные эксперты</h4>
+                        <p class="solution-role" data-i18n="sol_2_desc">Действующие ученые с опытом публикаций в Scopus/WoS</p>
+
+                    </div>
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-purple"></div>
+                            <div class="solution-avatar">📚</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_3_title">От базы до результата</h4>
+                        <p class="solution-role" data-i18n="sol_3_desc">Полный путь от понимания до готовой статьи</p>
+
+                    </div>
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-pink"></div>
+                            <div class="solution-avatar">💬</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_4_title">Постоянная обратная связь</h4>
+                        <p class="solution-role" data-i18n="sol_4_desc">Разборы работ до реального результата</p>
+
+                    </div>
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-orange"></div>
+                            <div class="solution-avatar">🌐</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_5_title">Научная среда</h4>
+                        <p class="solution-role" data-i18n="sol_5_desc">Участие в конференциях, воркшопах, нетворкинг</p>
+
+                    </div>
+                    <div class="solution-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="solution-header">
+                            <div class="solution-bg bg-cyan"></div>
+                            <div class="solution-avatar">✅</div>
+                        </div>
+                        <h4 class="solution-name" data-i18n="sol_6_title">Измеримый результат</h4>
+                        <p class="solution-role" data-i18n="sol_6_desc">Сертификат, готовая работа, рост карьеры</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2 class="section-title" data-i18n="courses_title">Наши программы</h2>
+                </div>
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="course-badge badge-popular" data-i18n="course_badge_popular">ПОПУЛЯРНЫЙ</div>
+                        <h3 class="course-title" data-i18n="course_1_title">Базовый курс</h3>
+                        <div class="course-duration"><i data-lucide="clock"></i> <span data-i18n="course_1_duration">4 месяца</span></div>
+                        <div class="course-price">
+                            <span class="price-new text-blue">1 500 000 сум</span>
+                            <span class="price-old">3 220 000 сум</span>
+                        </div>
+                        <p class="course-desc" data-i18n="course_1_desc">Основы академических публикаций</p>
+                        <a href="#form" class="btn btn-primary" data-i18n="btn_enroll">Записаться на курс</a>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="course-card premium" data-aos="fade-up" data-aos-delay="100">
+                        <div class="course-badge badge-premium" data-i18n="course_badge_premium">ПРЕМИУМ</div>
+                        <h3 class="course-title" data-i18n="course_2_title">Школа наставничества</h3>
+                        <div class="course-duration"><i data-lucide="clock"></i> <span data-i18n="course_2_duration">6 месяцев</span></div>
+                        <div class="course-price">
+                            <span class="price-new">7 000 000 сум</span>
+                            <span class="price-old">10 000 000 сум</span>
+                        </div>
+                        <p class="course-desc" data-i18n="course_2_desc">Напишите статью под руководством ментора</p>
+                        <a href="#form" class="btn" data-i18n="btn_enroll">Записаться на курс</a>
+                    </div>
+                    
+                    <!-- Course 3 -->
+                    <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="course-badge badge-mini" data-i18n="course_badge_mini">МИНИ-КУРС</div>
+                        <h3 class="course-title" data-i18n="course_3_title">ИИ для исследований</h3>
+                        <div class="course-duration"><i data-lucide="clock"></i> <span data-i18n="course_3_duration">1 месяц</span></div>
+                        <div class="course-price">
+                            <span class="price-new">700 000 сум</span>
+                            <span class="price-old">1 200 000 сум</span>
+                        </div>
+                        <p class="course-desc" data-i18n="course_3_desc">Используйте ИИ для исследований</p>
+                        <a href="#contact" class="btn btn-primary w-100" data-i18n="btn_enroll">Записаться на курс</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Form Section -->
+        <section id="contact" class="lead-form-section">
+            <div class="container">
+                <div class="lead-wrapper">
+                    <div class="lead-image" data-aos="fade-right">
+                        <div class="illustration-placeholder">
+                            <i data-lucide="send"></i>
+                        </div>
+                    </div>
+                    <div class="lead-content" data-aos="fade-left">
+                        <h2 class="lead-title" data-i18n="form_title">Начните свой путь сегодня</h2>
+                        <p class="lead-subtitle" data-i18n="form_subtitle">Получите бесплатную консультацию</p>
+                        <form id="leadForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" data-i18n="form_label_name">Имя *</label>
+                                <input type="text" id="name" name="name" required class="form-input" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form_label_phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required class="form-input" placeholder="+998 (__)  ___-__-__" maxlength="19">
+                            </div>
+                            <div class="form-group">
+                                <label for="status" data-i18n="form_label_status">Статус</label>
+                                <select id="status" name="status" class="form-input">
+                                    <option value="phd" data-i18n="status_phd">PhD</option>
+                                    <option value="master" data-i18n="status_master">Магистр</option>
+                                    <option value="bachelor" data-i18n="status_bachelor">Бакалавр</option>
+                                    <option value="teacher" data-i18n="status_teacher">Преподаватель</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit w-100" data-i18n="btn_subscribe">Оставить заявку</button>
+                            <p class="privacy-note" data-i18n="privacy_note">Мы ценим вашу конфиденциальность</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col col-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-icon"><i data-lucide="graduation-cap"></i></span>
+                        <span class="logo-text text-white">RESEARCHERS ACADEMY</span>
+                    </a>
+                    <p class="footer-desc" data-i18n="footer_desc">Академическая экосистема для публикации научных статей в международных журналах.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-i18n="footer_links">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav_home">Главная</a></li>
+                        <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-i18n="footer_courses">Курсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="#courses" data-i18n="course_1_title">Базовый курс</a></li>
+                        <li><a href="#courses" data-i18n="course_2_title">Школа наставничества</a></li>
+                        <li><a href="#courses" data-i18n="course_3_title">ИИ для исследований</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-i18n="footer_hours">Working Hours</h4>
+                    <p class="footer-text">Пн - Пт: 9:00 - 18:00</p>
+                    <p class="footer-text">Сб - Вс: Выходной</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Researchers Academy. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Simple counter animation init
+        const counters = document.querySelectorAll('.counter');
+        const options = { threshold: 1, rootMargin: "0px 0px -50px 0px" };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                
+                const target = +entry.target.getAttribute('data-target');
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        entry.target.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        entry.target.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(entry.target);
+            });
+        }, options);
+        
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>
