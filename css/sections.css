@@ -937,3 +937,8 @@ body.has-discount-bar .header {
     color: #FCA5A5;
 }
 
+/* Footer — stays dark navy in both themes */
+[data-theme="dark"] .footer {
+    background: #0A2540;
+}
+

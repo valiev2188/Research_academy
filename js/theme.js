@@ -27,12 +27,17 @@
     btn.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
       var next = current === 'dark' ? 'light' : 'dark';
+      // Enable color transitions only during manual toggle (not on load / AOS)
+      document.documentElement.classList.add('theme-transitioning');
       applyTheme(next);
       localStorage.setItem(STORAGE_KEY, next);
       // Re-render Lucide icons after theme change (sun/moon swap)
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
+      setTimeout(function () {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 350);
     });
 
     // Follow OS preference change only when user has no saved preference
