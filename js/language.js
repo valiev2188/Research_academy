@@ -5,7 +5,7 @@ const translations = {
     nav_about: "О нас",
     nav_contact: "Контакты",
     btn_consultation: "Консультация",
-    hero_badge: "100% Satisfaction Guarantee",
+    hero_badge: "Гарантия качества 100%",
     hero_title: "Ваш надежный партнер на пути к международной публикации",
     hero_subtitle: "Академическая экосистема, где исследователи пишут научные статьи для Scopus и Web of Science под руководством экспертов",
     btn_explore: "Все курсы",
@@ -71,7 +71,10 @@ const translations = {
     course_1_desc: "Основы академических публикаций",
     course_2_desc: "Напишите статью под руководством ментора",
     course_3_desc: "Используйте ИИ для исследований",
-    btn_enroll: "Записаться на курс",
+    btn_enroll: "Записаться со скидкой 53%",
+    
+    seats_left: "Осталось",
+    seats_of: "мест из",
     
     form_title: "Начните свой путь сегодня",
     form_subtitle: "Получите бесплатную консультацию",
@@ -83,13 +86,24 @@ const translations = {
     status_master: "Магистр",
     status_bachelor: "Бакалавр",
     status_teacher: "Преподаватель",
-    btn_subscribe: "Оставить заявку",
+    btn_subscribe: "Записаться со скидкой 53%",
     privacy_note: "Мы ценим вашу конфиденциальность",
     
     footer_desc: "Академическая экосистема для публикации научных статей в международных журналах.",
     footer_links: "Ресурсы",
     footer_courses: "Курсы",
-    footer_hours: "Рабочие часы"
+    footer_hours: "Рабочие часы",
+    footer_weekdays: "Пн - Пт: 9:00 - 18:00",
+    footer_weekends: "Сб - Вс: Выходной",
+
+    // Marketing mechanics
+    discount_bar_text: "Скидка 53% сгорит через",
+    discount_bar_btn: "Записаться →",
+    viewer_label: "Сейчас смотрят:",
+    viewer_people: "человек",
+    exit_title: "Подождите! Специальное предложение",
+    exit_desc: "Получите персональную скидку 53% на любой курс. Предложение действует:",
+    exit_cta: "Получить скидку"
   },
   uz: {
     nav_home: "Asosiy",
@@ -162,8 +176,11 @@ const translations = {
     course_3_duration: "1 oy",
     course_1_desc: "Akademik nashrlar asoslari",
     course_2_desc: "Mentor rahbarligida maqola yozing",
-    course_3_desc: "Tadqiqotlar uchun SInidan foydalaning",
-    btn_enroll: "Kursga yozilish",
+    course_3_desc: "Tadqiqotlar uchun SIdan foydalaning",
+    btn_enroll: "53% chegirma bilan yozilish",
+    
+    seats_left: "Qoldi",
+    seats_of: "o'rin",
     
     form_title: "O'z yo'lingizni bugun boshlang",
     form_subtitle: "Bepul konsultatsiya oling",
@@ -175,13 +192,24 @@ const translations = {
     status_master: "Magistr",
     status_bachelor: "Bakalavr",
     status_teacher: "O'qituvchi",
-    btn_subscribe: "Ariza qoldirish",
+    btn_subscribe: "53% chegirma bilan yozilish",
     privacy_note: "Biz maxfiyligingizni qadrlaymiz",
     
     footer_desc: "Xalqaro jurnallarda ilmiy maqolalar chop etish uchun akademik ekotizim.",
     footer_links: "Resurslar",
     footer_courses: "Kurslar",
-    footer_hours: "Ish vaqti"
+    footer_hours: "Ish vaqti",
+    footer_weekdays: "Du - Ju: 9:00 - 18:00",
+    footer_weekends: "Sha - Yak: Dam olish",
+
+    // Marketing mechanics
+    discount_bar_text: "53% chegirma tugashiga",
+    discount_bar_btn: "Yozilish →",
+    viewer_label: "Hozir ko'rmoqda:",
+    viewer_people: "kishi",
+    exit_title: "Kutib turing! Maxsus taklif",
+    exit_desc: "Istalgan kursga 53% shaxsiy chegirma oling. Taklif amal qiladi:",
+    exit_cta: "Chegirmani olish"
   }
 };
 

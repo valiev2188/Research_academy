@@ -167,6 +167,40 @@
     .about-stats-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Marketing responsive */
+    .discount-bar-inner {
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+
+    .discount-timer {
+        font-size: 1rem;
+    }
+
+    .discount-bar-btn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    .hero-social-icons {
+        justify-content: center;
+    }
+
+    .social-proof-toast {
+        left: 10px;
+        right: 10px;
+        bottom: 15px;
+        max-width: none;
+    }
+
+    .popup-modal {
+        padding: 32px 24px;
+    }
+
+    .popup-mini-timer {
+        font-size: 2rem;
+    }
 }
 
 /* Mobile (480px and below) */
@@ -207,5 +241,9 @@
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .discount-bar-text {
+        display: none; /* Show only timer and button on very small screens */
     }
 }
