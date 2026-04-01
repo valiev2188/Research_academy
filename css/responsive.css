@@ -247,3 +247,10 @@
         display: none; /* Show only timer and button on very small screens */
     }
 }
+
+/* =========================================
+   DARK THEME — RESPONSIVE OVERRIDES
+   ========================================= */
+[data-theme="dark"] .nav {
+    background: rgba(15, 23, 42, 0.98);
+}

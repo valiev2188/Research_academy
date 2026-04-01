@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Theme switcher (in <head> to prevent flash of wrong theme) -->
+    <script src="js/theme.js"></script>
 </head>
 <body>
     <!-- Discount Sticky Bar -->
@@ -60,6 +62,10 @@
                         <button class="btn-lang active" data-lang="ru">🇷🇺 RU</button>
                         <button class="btn-lang" data-lang="uz">🇺🇿 UZ</button>
                     </div>
+                    <button id="themeToggle" class="btn-theme-toggle" aria-label="Toggle theme">
+                        <i data-lucide="sun" id="themeIconSun"></i>
+                        <i data-lucide="moon" id="themeIconMoon"></i>
+                    </button>
                     <a href="#contact" class="btn btn-primary" data-i18n="btn_consultation">Консультация</a>
                     <button class="menu-toggle" aria-label="Toggle menu">
                         <i data-lucide="menu"></i>

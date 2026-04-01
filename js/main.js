@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Header Scroll Effect
     const header = document.querySelector('.header');
+    const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.boxShadow = 'var(--shadow-md)';
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.background = isDark() ? 'rgba(15, 23, 42, 0.97)' : 'rgba(255, 255, 255, 0.95)';
         } else {
             header.style.boxShadow = 'none';
-            header.style.background = 'rgba(255, 255, 255, 0.9)';
+            header.style.background = isDark() ? 'rgba(15, 23, 42, 0.9)' : 'rgba(255, 255, 255, 0.9)';
         }
     });
 
