@@ -628,7 +628,8 @@ body.has-discount-bar .header {
     border: 1px solid rgba(16, 185, 129, 0.2);
     padding: 8px 18px;
     border-radius: var(--radius-full);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    font-family: var(--font-serif);
     font-weight: 500;
     color: #059669;
     margin-bottom: 20px;

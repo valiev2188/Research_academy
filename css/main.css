@@ -33,6 +33,7 @@
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Work Sans', sans-serif;
+  --font-serif: 'Lora', serif;
   
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -630,7 +631,8 @@ button, input, textarea, select {
 }
 
 .badge-text {
-  font-size: 0.9rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -710,8 +712,9 @@ button, input, textarea, select {
 }
 
 .stat-name {
+  font-family: var(--font-serif);
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
