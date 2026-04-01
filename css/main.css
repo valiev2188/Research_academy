@@ -2,57 +2,109 @@
    VARIABLES & DESIGN SYSTEM
    ========================================= */
 :root {
+  color-scheme: light;
+
   /* Primary Colors */
   --color-primary: #2563EB;
   --color-primary-dark: #1E40AF;
   --color-primary-darker: #0A2540;
-  
+
   /* Accent Colors */
   --color-accent: #FFA500;
   --color-accent-light: #FFD700;
-  
+
   /* Backgrounds */
   --color-bg-main: #FFFFFF;
   --color-bg-light: #F8FAFC;
   --color-bg-section: #F1F5F9;
   --color-bg-dark: #0F172A;
-  
+
   /* Text */
   --color-text: #1E293B;
   --color-text-muted: #64748B;
-  
+
   /* Utility/Status colors */
   --color-green: #10B981;
   --color-purple: #8B5CF6;
   --color-pink: #EC4899;
-  
+
   /* UI Elements */
   --color-border: #E2E8F0;
   --color-white: #FFFFFF;
-  
+
+  /* Language switcher bg */
+  --color-lang-switcher-bg: #f1f5f9;
+
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Work Sans', sans-serif;
   --font-serif: 'Lora', serif;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-blue: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease-in-out;
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Borders */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-xl: 32px;
   --radius-full: 9999px;
+}
+
+/* =========================================
+   DARK THEME
+   ========================================= */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-primary: #3B82F6;
+  --color-primary-dark: #2563EB;
+  --color-primary-darker: #E2E8F0;
+
+  --color-bg-main: #0F172A;
+  --color-bg-light: #1E293B;
+  --color-bg-section: #162032;
+
+  --color-text: #F1F5F9;
+  --color-text-muted: #94A3B8;
+
+  --color-green: #34D399;
+  --color-purple: #A78BFA;
+  --color-pink: #F472B6;
+
+  --color-border: #334155;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-blue: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+
+  --color-lang-switcher-bg: #263248;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #0F172A 0%, #1a2540 100%);
+}
+
+/* Smooth color transitions — only active while theme is switching
+   (class added/removed by theme.js), so AOS and page-load animations
+   are never affected. */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+              color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 /* =========================================
@@ -295,7 +347,7 @@ button, input, textarea, select {
 
 .language-switcher {
   display: flex;
-  background: #f1f5f9;
+  background: var(--color-lang-switcher-bg);
   border-radius: var(--radius-full);
   padding: 4px;
 }
@@ -572,7 +624,7 @@ button, input, textarea, select {
    ========================================= */
 .about {
   padding: 120px 0;
-  background: var(--color-white);
+  background: var(--color-bg-main);
 }
 
 .about-inner {
@@ -722,4 +774,99 @@ button, input, textarea, select {
   display: inline-flex;
   gap: 12px;
   padding: 16px 32px;
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON
+   ========================================= */
+.btn-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-theme-toggle:hover {
+  background: var(--color-bg-section);
+  color: var(--color-text);
+  border-color: var(--color-primary);
+}
+
+.btn-theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+#themeIconSun  { display: none; }
+#themeIconMoon { display: block; }
+
+[data-theme="dark"] #themeIconSun  { display: block; }
+[data-theme="dark"] #themeIconMoon { display: none; }
+
+/* =========================================
+   DARK THEME — COMPONENT OVERRIDES (main.css)
+   ========================================= */
+
+/* Header */
+[data-theme="dark"] .header {
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom-color: #334155;
+}
+
+/* Glass panel (hero) */
+[data-theme="dark"] .glass-panel {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(51, 65, 85, 0.6);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero */
+[data-theme="dark"] .hero {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(255, 165, 0, 0.04), transparent 40%);
+}
+
+/* Floating bubble */
+[data-theme="dark"] .floating-bubble {
+  background: var(--color-bg-light);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll indicator */
+[data-theme="dark"] .scroll-indicator {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+/* Stats section */
+[data-theme="dark"] .stats {
+  background: var(--color-bg-section);
+  border-top-color: var(--color-border);
+  border-bottom-color: var(--color-border);
+}
+
+/* About image container */
+[data-theme="dark"] .about-image-container {
+  background: linear-gradient(145deg, #1E293B, #263248);
+  box-shadow: -20px 20px 60px rgba(59, 130, 246, 0.08), 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Background decorative shapes — much more subtle on dark bg */
+[data-theme="dark"] .bg-shape {
+  opacity: 0.12;
+}
+
+/* Badge (inline section badges) */
+[data-theme="dark"] .badge {
+  background-color: rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .badge-light {
+  background-color: rgba(59, 130, 246, 0.15);
 }
