@@ -71,7 +71,7 @@ const translations = {
     course_1_desc: "Основы академических публикаций",
     course_2_desc: "Напишите статью под руководством ментора",
     course_3_desc: "Используйте ИИ для исследований",
-    btn_enroll: "Записаться со скидкой 53%",
+    btn_enroll: "Записаться",
     
     seats_left: "Осталось",
     seats_of: "мест из",
@@ -177,7 +177,7 @@ const translations = {
     course_1_desc: "Akademik nashrlar asoslari",
     course_2_desc: "Mentor rahbarligida maqola yozing",
     course_3_desc: "Tadqiqotlar uchun SIdan foydalaning",
-    btn_enroll: "53% chegirma bilan yozilish",
+    btn_enroll: "Yozilish",
     
     seats_left: "Qoldi",
     seats_of: "o'rin",
@@ -221,13 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updateLanguage(currentLang);
   
   langButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const lang = e.target.getAttribute('data-lang');
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
       updateLanguage(lang);
-      
-      // Update UI buttons
-      langButtons.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
     });
   });
 
